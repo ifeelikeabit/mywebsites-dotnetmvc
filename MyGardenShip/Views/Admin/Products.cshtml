@@ -1,0 +1,11 @@
+@model IEnumerable<Product>
+<div class="h-[80vh] w-full  bg-[#063120]  text-white ">
+
+    <div class="flex w-full flex-row p-2 justify-center flex-wrap gap-2">
+        @foreach (var product in Model)
+        {
+            @await Html.PartialAsync("_Product", product)
+        }
+    </div>
+
+</div>

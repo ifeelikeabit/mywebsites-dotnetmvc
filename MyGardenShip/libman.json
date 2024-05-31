@@ -1,0 +1,18 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "tailwindcss@2.2.19",
+      "destination": "wwwroot/lib/tailwindcss"
+    },
+    {
+      "library": "flowbite@2.3.0",
+      "destination": "wwwroot/lib/flowbite"
+    },
+    {
+      "library": "font-awesome@6.5.2",
+      "destination": "wwwroot/lib/font-awesome"
+    }
+  ]
+}

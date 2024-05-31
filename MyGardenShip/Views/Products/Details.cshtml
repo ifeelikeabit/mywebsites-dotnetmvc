@@ -1,0 +1,82 @@
+@model Product
+
+@{
+    ViewBag.Title = "Detaylar";
+}
+<div class="w-full justify-center items-center h-[80vh] flex"
+    style="background-image: url('/img/login-bg.jpg');background-size: cover;">
+    <div
+        class="[text-shadow:1px_1px_1px_var(--tw-shadow-color)] shadow-black  text-gray-300  p-1 group font-sans rounded  gap-2 flex flex-row text-3xl backdrop-blur-lg">
+        <img src="data:image/png;base64,@Model.Image" class="object-cover w-[360px] h-[360px]   rounded-lg
+opacity-100 ">
+        <div>
+            <div>
+                <span class="font-normal drop-shadow-3xl">Ürün Adı: </span><span
+                    class="font-extralight">@Model.Name</span>
+            </div>
+            <div>
+                <span class="font-normal">Türü: </span><span class="font-extralight">
+                    @Model.Type.Substring(0, 1).ToUpper()@Model.Type.Substring(1)</span>
+            </div>
+            <div>
+                <span class="font-normal">Üretici: </span><span class="font-extralight">@if
+                    (@Model.ProducerNameSurname.Length >
+                    20)
+                    {
+                        <span class="font-extralight"> @Model.ProducerNameSurname.Substring(0, 17)...</span>
+                    }
+                    else
+                    {
+                        <span class="font-extralight">@Model.ProducerNameSurname</span>
+
+                    }
+            </div>
+            <div>
+                <span class="font-normal">Üretici İletişim: </span><span
+                    class="font-extralight">@Model.ProducerPhone</span>
+            </div>
+            <div>
+                <span class="font-normal">Üretim Yeri: </span><span class="font-extralight">@Model.Location</span>
+            </div>
+            <div>
+                <span class="font-normal">Miktar:</span><span class="font-extralight"> @Model.Amount Adet</span>
+            </div>
+            <div>
+                <span class="font-normal">Birim Fiyatı: </span><span class="font-extralight">
+                    @if (@Model.Currency == "$")
+                    {
+                        <a class="underline hover:text-white duration-500 transition-all"
+                            href="https://www.xe.com/currencyconverter/convert/?Amount=@Model.PricePer&From=USD&To=TRY">@Model.PricePer@Model.Currency</a>
+                    }
+                    else
+                    {
+                        <span> @Model.PricePer@Model.Currency</span>
+                    }</span>
+            </div>
+            <div>
+                <span class="font-normal">Ömrü: </span><span class="font-extralight">
+                    @Model.LifeTime Gün</span>
+            </div>
+            <div>
+                <span class="font-normal">Toplam Fiyat: </span><span class="font-extralight">
+                    @if (@Model.Currency == "$")
+                    {
+                        <a class="underline hover:text-white duration-500 transition-all"
+                            href="https://www.xe.com/currencyconverter/convert/?Amount=@(@Model.PricePer * @Model.Amount)&From=USD&To=TRY">
+                            @(@Model.PricePer * @Model.Amount)@Model.Currency</a>
+                    }
+                    else
+                    {
+                        <span>@(@Model.PricePer * @Model.Amount)@Model.Currency</span>
+                    }
+
+                </span>
+            </div>
+            <div>
+                <span class="font-normal">Ekleyen: </span><span class="font-extralight">
+                    @Model.Email</span>
+            </div>
+
+        </div>
+    </div>
+</div>

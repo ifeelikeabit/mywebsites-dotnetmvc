@@ -1,0 +1,51 @@
+@model Product
+
+<div
+    class="  hover:text-gray-600 text-gray-800 w-[500px] h-[230px] rounded-lg p-1 group font-sans hover:bg-[#72f0a0] bg-[#49cb79] gap-2 flex flex-row transition-all duration-500">
+    <img src="data:image/png;base64,@Model.Image" class="object-cover w-[222px]  h-[222px] rounded-lg
+     group-hover:opacity-90 opacity-100 transition-all duration-500">
+    <div>
+        <div>
+            <span class="font-normal">Ürün Adı: </span><span class="font-extralight">@Model.Name</span>
+        </div>
+        <div>
+            <span class="font-normal">Türü: </span><span class="font-extralight">
+                @Model.Type.Substring(0, 1).ToUpper()@Model.Type.Substring(1)</span>
+        </div>
+        <div>
+            <span class="font-normal">Üretici: </span><span class="font-extralight">@if
+                (@Model.ProducerNameSurname.Length >
+                20)
+                {
+                    <span class="font-extralight"> @Model.ProducerNameSurname.Substring(0, 17)...</span>
+                }
+                else
+                {
+                    <span class="font-extralight">@Model.ProducerNameSurname</span>
+
+                }
+        </div>
+        <div>
+            <span class="font-normal">Üretici İletişim: </span><span class="font-extralight">@Model.ProducerPhone</span>
+        </div>
+        <div>
+            <span class="font-normal">Üretim Yeri: </span><span class="font-extralight">@Model.Location</span>
+        </div>
+        <div>
+            <span class="font-normal">Miktar:</span><span class="font-extralight"> @Model.Amount Adet</span>
+        </div>
+        <div>
+            <span class="font-normal">Birim Fiyatı: </span><span class="font-extralight">
+                @Model.PricePer@Model.Currency</span>
+        </div>
+        <div>
+            <span class="font-normal">Ömrü: </span><span class="font-extralight">
+                @Model.LifeTime Gün</span>
+        </div>
+        <div>
+            <span class="font-normal">Toplam Fiyat: </span><span class="font-extralight">
+                @(@Model.PricePer * @Model.Amount)@Model.Currency</span>
+        </div>
+
+    </div>
+</div>

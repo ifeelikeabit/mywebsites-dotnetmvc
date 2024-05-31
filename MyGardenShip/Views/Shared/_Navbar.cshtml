@@ -1,0 +1,71 @@
+<nav class="bg-green-700  fixed w-full z-20 top-0 start-0 border-b border-green-700 text-white">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 transition-all duration-500">
+        <a asp-controller="Home" asp-action="Index"
+            class="font-bold text-2xl ml-3 flex flex-row items-center gap-3 no-underline visited:text-current"><img
+                src="/img/garden.png" alt="" class="w-10">
+            <span>My<span class="text-green-200">Garden</span><span class="text-blue-300">Ship</span></span></a>
+        <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse transition-all duration-500">
+            @if (User.Identity.IsAuthenticated)
+            {
+
+                <a asp-controller="Products" asp-action="Add" type="button"
+                    class="text-white transition-all duration-500 bg-green-500 hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-2">Ürün
+                    ekle</a>
+                    @if(User.IsInRole("admin")){
+  <a asp-controller="Admin" asp-action="Index" type="button"
+                    class="text-white transition-all duration-500 bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-2">Admin Paneli</a>
+                    }else{
+  <a asp-controller="User" asp-action="Index" type="button"
+                    class="text-white transition-all duration-500 bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-2">Merhaba,
+                    @User.Identity.Name</a>
+                    }
+              
+                <a asp-controller="User" asp-action="Logout" type="button"
+                    class="text-white transition-all duration-500 bg-red-500 hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-2">Çıkış
+                    Yap</a>
+
+            }
+            else
+            {
+                <a asp-controller="User" asp-action="Login" type="button"
+                    class="text-white transition-all duration-500 bg-green-500 hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-2">Giriş
+                    Yap</a>
+                <a asp-controller="User" asp-action="Register" type="button"
+                    class="text-white transition-all duration-500 bg-amber-500 hover:bg-amber-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center">Kaydol</a>
+            }
+            <button data-collapse-toggle="navbar-sticky" type="button"
+                class="transition-all duration-500 inline-flex items-center p-2 w-10 h-10 justify-center text-sm  rounded-lg md:hidden hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                aria-controls="navbar-sticky" aria-expanded="false">
+                <span class="sr-only">Ana menüyü aç</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+        </div>
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 transition-all duration-500"
+            id="navbar-sticky">
+            <ul
+                class="flex flex-col p-4 md:p-0 mt-4 font-medium bg-green-700 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-green-700 transition-all duration-500 ">
+                <li>
+                    <a asp-controller="Home" asp-action="Index"
+                        class="block py-2 px-3 text-white bg-green-500 md:hover:text-green-500 rounded md:bg-transparent md:p-0 transition-all duration-500"
+                        aria-current="page">Ana Sayfa</a>
+                </li>
+                <li>
+                    <a asp-controller="Home" asp-action="About"
+                        class="block py-2 px-3  rounded hover:bg-green-500 md:hover:bg-transparent md:hover:text-green-500 md:p-0 transition-all duration-500">Hakkında</a>
+                </li>
+                <li>
+                    <a asp-controller="Products" asp-action="Index"
+                        class="block py-2 px-3  rounded hover:bg-green-500 md:hover:bg-transparent md:hover:text-green-500 md:p-0 transition-all duration-500">Ürünler</a>
+                </li>
+                <li>
+                    <a asp-controller="Home" asp-action="Contact"
+                        class="block py-2 px-3  rounded hover:bg-green-500 md:hover:bg-transparent md:hover:text-green-500 md:p-0 transition-all duration-500">İletişim</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

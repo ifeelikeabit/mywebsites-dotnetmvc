@@ -1,0 +1,28 @@
+@model Product
+<div class=" bg-green-800 flex flex-row mx-6 w-full p-2 rounded-xl gap-3">
+    <div class="flex flex-row items-center  gap-2 w-[150px] ml-3">
+        <span class="font-bold text-gray-30000">Ürün Adı:</span>
+        <span class=""> @Model.Name</span>
+    </div>
+    <div class="flex flex-row items-center gap-2 w-[250px]">
+        <span class="font-bold text-gray-300">Ekleyen:</span>
+        <span class=""> @Model.Email</span>
+    </div>
+
+    <div class="flex flex-row items-center gap-2 w-[150px]">
+        <span class="font-bold text-gray-300">Miktar:</span>
+        <span> @Model.Amount</span>
+    </div>
+    <div class="flex flex-row items-center gap-2 w-[150px]">
+        <span class="font-bold text-gray-300">Adet Fiyatı:</span>
+        <span> @Model.PricePer@Model.Currency</span>
+    </div>
+    <div class="flex flex-row items-center gap-2 w-[200px]">
+        <span class="font-bold text-gray-300">Toplam Fiyatı:</span>
+        <span>@(@Model.PricePer * @Model.Amount)@Model.Currency</span>
+    </div>
+    <a class=" text-white ml-auto transition-all duration-500 bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center "
+        asp-action="Edit" asp-controller="Products" asp-route-id="@Model.Id">Düzenle</a>
+    <a class=" text-white transition-all duration-500 bg-red-500 hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center "
+        asp-action="Delete" asp-controller="Products" asp-route-id="@Model.Id">Sil</a>
+</div>

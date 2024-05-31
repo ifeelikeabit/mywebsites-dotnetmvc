@@ -1,0 +1,40 @@
+@model LoginViewModel
+@{
+    ViewBag.Title = "Kullanıcı Giriş";
+}
+<div class="w-full justify-center items-center h-[80vh] flex"
+    style="background-image: url('/img/login-bg.jpg');background-size: cover;">
+    <div class="w-full max-w-sm p-4 bg-transparent backdrop-blur rounded-2xl shadow sm:p-6 md:p-8 text-white font-bold">
+        <form class="space-y-6" method="post">
+            <div class="text-red-700" asp-validation-summary="All"></div>
+            <h5 class="text-xl font-medium  "><span>My<span class="text-green-500">Garden</span><span
+                        class="text-blue-600">Ship</span></span></a>'e Giriş Yap</h5>
+            <div>
+                <label asp-for="Email" class="block mb-2 text-sm font-medium  ">E-Mail</label>
+                <input asp-for="Email"
+                    class="bg-gray-50 border border-gray-300 text-gray-900  text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 "
+                    placeholder="isim@sirket.com" required />
+            </div>
+            <div>
+                <label asp-for="Password" class="block mb-2 text-sm font-medium  ">Şifre</label>
+                <input asp-for="Password" type="password" placeholder="••••••••"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 "
+                    required />
+            </div>
+            <div class="flex items-center gap-2">
+                <input asp-for="RememberMe" type="checkbox"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500" />
+                <label asp-for="RememberMe" class="block text-sm font-medium ">Beni hatırla</label>
+
+            </div>
+            <button type="submit"
+                class="w-full text-white transition-all duration-500 bg-green-500 hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">Hesaba
+                giriş yap</button>
+            <div class="text-sm font-medium text-gray-300">
+                Hesabın yok mu? <a asp-controller="User" asp-action="Register"
+                    class="text-green-700 hover:underline">Hesap oluştur</a>
+            </div>
+        </form>
+    </div>
+
+</div>

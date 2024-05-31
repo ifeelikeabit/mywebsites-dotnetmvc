@@ -1,0 +1,11 @@
+@model IEnumerable<AppUser>
+<div class="h-[80vh] w-full  bg-[#063120]  text-white ">
+
+    <div class="flex w-full flex-row p-2 justify-center flex-wrap gap-2">
+        @foreach (var user in Model)
+        {
+            @await Html.PartialAsync("_User", user)
+        }
+    </div>
+
+</div>

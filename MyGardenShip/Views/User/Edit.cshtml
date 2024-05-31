@@ -1,0 +1,22 @@
+@model AppUser
+<div class="w-full justify-center items-center h-[80vh] flex"
+    style="background-image: url('/img/login-bg.jpg');background-size: cover;">
+    <div class="w-full max-w-sm p-4 bg-transparent backdrop-blur rounded-2xl shadow sm:p-6 md:p-8 text-white font-bold">
+        <h2><b>@Model.UserName (Id:@Model.Email)</b></h2>
+        <h4> Kullanıcı adı değiştirme</h4>
+        <form class="space-y-6" method="post" enctype="multipart/form-data">
+            <input type="hidden" value="@Model.Id" asp-for="Id">
+            <div class="flex gap-4 mb-1 ">
+                <div> <label asp-for="UserName" class="block mb-1 text-sm font-medium  ">Kullanıcı Adı</label>
+                    <input asp-for="UserName"
+                        class="bg-gray-50 border border-gray-300 text-gray-900  text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-[200px] p-1.5"
+                        placeholder="Elma" required />
+                </div>
+            </div>
+            <button type="submit"
+                class=" text-white transition-all duration-500 bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">Güncelle</button>
+            <a class=" text-white transition-all duration-500 bg-red-500 hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center "
+                asp-controller="User" asp-action="Index" asp-route-id="@Model.Id">Vazgeç</a>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+@model EditUserViewModel
+<div class="h-[80vh] w-full flex bg-[#063120] flex-col items-center text-white text-3xl justify-center">
+    <form method="post">
+        <input type="hidden" asp-for="Id">
+        <div class="text-red-700" asp-validation-summary="All"></div>
+        <div class="flex flex-col w-40">
+            <div class="flex gap-4 mb-1 ">
+                <div> <label asp-for="UserName" class="block mb-1 text-sm font-medium  ">Kullanıcı Adı</label>
+                    <input asp-for="UserName"
+                        class="bg-gray-50 border border-gray-300 text-gray-900  text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-[200px] p-1.5"
+                        placeholder="Kullanıcı Adı" required />
+                </div>
+            </div>
+            <div class="flex gap-4 mb-1 ">
+                <div> <label asp-for="Email" class="block mb-1 text-sm font-medium  ">Email</label>
+                    <input asp-for="Email"
+                        class="bg-gray-50 border border-gray-300 text-gray-900  text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-[200px] p-1.5"
+                        placeholder="Email" required />
+                </div>
+            </div>
+            <div class="flex items-center mb-4">
+                <input asp-for="EmailConfirmed" type="checkbox" value="1"
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                <label asp-for="EmailConfirmed" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Email
+                    Onayı</label>
+            </div>
+            <button type="submit"
+                class="w-[200px] text-white transition-all duration-500 bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">Güncelle</button>
+        </div>
+    </form>
+
+</div>
