@@ -1,0 +1,10 @@
+﻿<values>
+  <value name="ShutdownReason" type="int">3</value>
+  <value name="VSExeVersion" type="string">7.0.24.17804</value>
+  <value name="PID" type="int">1771</value>
+  <value name="CTime" type="qword">133614487746087888</value>
+  <value name="ExeName" type="string">rzls</value>
+  <value name="StillAlive" type="qword">133614487750995507</value>
+  <value name="VSIs64BitProcess" type="string">True</value>
+  <value name="VSInstanceId" type="string">20b60e25-a706-48e2-b1e0-cc94b8fc4e261716975172885</value>
+</values>

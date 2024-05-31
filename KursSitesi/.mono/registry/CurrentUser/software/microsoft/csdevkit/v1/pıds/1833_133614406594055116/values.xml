@@ -1,0 +1,13 @@
+﻿<values>
+  <value name="VSInstanceId" type="string">6269ee05-c988-44f6-9889-c59c3c3793921716967057112</value>
+  <value name="VSExeVersion" type="string">7.0.24.17804</value>
+  <value name="ShutdownReason" type="int">3</value>
+  <value name="CTime" type="qword">133614406594055116</value>
+  <value name="StillAlive" type="qword">133614418601409846</value>
+  <value name="VSIs64BitProcess" type="string">True</value>
+  <value name="extname" type="string">ms-dotnettools.csdevkit</value>
+  <value name="PID" type="int">1833</value>
+  <value name="ExeName" type="string">rzls</value>
+  <value name="extversion" type="string">1.6.8</value>
+  <value name="vscodeversion" type="string">1.89.1</value>
+</values>

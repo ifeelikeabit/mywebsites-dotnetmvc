@@ -1,0 +1,24 @@
+@model Enrolment
+
+<h2 style="font-size: 24px; font-weight: bold; background-color: #f2f2f2; padding: 10px;">New Enrolment</h2>
+
+
+<form method="post" asp-controller="Enrolment" asp-action="Create">
+
+
+    <div class="mb3">
+        <label asp-for="StudentId" class="form-label">Student</label>
+        <select asp-for="StudentId" asp-items="ViewBag.Student" class="form-control">
+            <option>Select</option>
+        </select>
+    </div>
+    <div class="mb3">
+        <label asp-for="CourseId" class="form-label">Course</label>
+        <select asp-for="CourseId" asp-items="ViewBag.Course" class="form-control">
+            <option>Select</option>
+        </select>
+
+    </div>
+
+    <button type="submit" class="btn btn-primary">Confirm</button>
+</form>

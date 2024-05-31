@@ -1,0 +1,32 @@
+@model Course
+
+<h2 style="font-size: 24px; font-weight: bold; background-color: #f2f2f2; padding: 10px;">Kurs'u Düzenle</h2>
+
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="CourseId">
+    <table>
+        <tr>
+            <th>Tanım</th>
+            <th>Bilgi</th>
+        </tr>
+        <tr>
+            <td><label asp-for="CourseName">Course Name</label></td>
+            <td><input asp-for="CourseName" class="form-control"></td>
+        </tr>
+        <tr>
+            <td><label asp-for="CourseTime">Kurs Tarihi</label></td>
+            <td><input asp-for="CourseTime" class="form-control" type="date"></td>
+        </tr>
+        <tr>
+            <td><label asp-for="start">başlangıç</label></td>
+            <td><input asp-for="start" class="form-control" type="time"></td>
+        </tr>
+        <tr>
+            <td><label asp-for="end">bitiş</label></td>
+            <td><input asp-for="end" class="form-control" type="time"></td>
+        </tr>
+    </table>
+
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>

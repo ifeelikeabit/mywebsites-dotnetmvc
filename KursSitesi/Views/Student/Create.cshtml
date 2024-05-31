@@ -1,0 +1,35 @@
+@model Student
+
+<h2 style="font-size: 24px; font-weight: bold; background-color: #f2f2f2; padding: 10px;">Öğrenci Oluştur</h2>
+
+
+<form  asp-action="Create" method="post">
+
+    <table>
+        <tr>
+            <th>Tanım</th>
+            <th>Bilgi</th>
+     
+            <td><label asp-for="StudentName">Firstname</label></td>
+            <td><input asp-for="StudentName" class="form-control"></td>
+        </tr>
+        <tr>
+            <td><label asp-for="StudentSurname">Surname</label></td>
+            <td><input asp-for="StudentSurname" class="form-control"></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Email">Email</label></td>
+            <td><input asp-for="Email" class="form-control"></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Adress">Address</label></td>
+            <td><input asp-for="Adress" class="form-control"></td>
+        </tr>
+        <tr>
+            <td><label asp-for="phoneNumber">Phone Number</label></td>
+            <td><input asp-for="phoneNumber" class="form-control"></td>
+        </tr>
+    </table>
+
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>

@@ -1,0 +1,115 @@
+@model whoindex.Models.LoginViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - My Application</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        .login-container .form-group {
+            margin-bottom: 20px;
+        }
+
+        .login-container .form-control {
+            border-radius: 25px;
+            padding: 15px;
+            font-size: 1.1em;
+        }
+
+        .login-container .btn {
+            background: linear-gradient(135deg, #6d7fcc, #7386D5);
+            border: none;
+            border-radius: 25px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .login-container .btn:hover {
+            background: linear-gradient(135deg, #7386D5, #6d7fcc);
+        }
+
+        .login-container p {
+            margin-top: 20px;
+            color: red;
+        }
+
+        .login-container .input-icon {
+            position: relative;
+        }
+
+        .login-container .input-icon i {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            color: #7386D5;
+        }
+
+        .login-container .form-control-icon {
+            padding-left: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form method="post" asp-action="Login">
+            <div class="form-group input-icon">
+                <label asp-for="Username" class="sr-only"></label>
+                <i class="bi bi-person-fill"></i>
+                <input asp-for="Username" class="form-control form-control-icon" placeholder="Username" />
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+            <div class="form-group input-icon">
+                <label asp-for="Password" class="sr-only"></label>
+                <i class="bi bi-lock-fill"></i>
+                <input asp-for="Password" type="password" class="form-control form-control-icon" placeholder="Password" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Giriş</button>
+            <div>
+                @if (ViewBag.Error != null)
+                {
+                    <p>@ViewBag.Error</p>
+                }
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>

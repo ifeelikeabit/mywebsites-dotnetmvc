@@ -1,0 +1,31 @@
+@model Course
+
+<h2 style="font-size: 24px; font-weight: bold; background-color: #f2f2f2; padding: 10px;">Course Create</h2>
+
+<form method="post" asp-controller="Course" asp-action="Create">
+    <table>
+         @if(ViewData["SearchedId"]!=null){<b style="color: red;">Bu id kullanılıyor!</b>}
+        <tr>
+            <td><label asp-for="CourseName">Course Name</label></td>
+            <td><input asp-for="CourseName" class="form-control"></td>
+        </tr>
+        <tr>
+            <td><label asp-for="quota">Course Quota</label></td>
+            <td><input asp-for="quota" class="form-control"></td>
+        </tr>
+
+        <tr>
+            <td><label asp-for="CourseTime">Course Day</label></td>
+            <td><input asp-for="CourseTime" class="form-control" type="date"></td>
+        </tr>
+            <tr>
+            <td><label asp-for="start">Start</label></td>
+            <td><input asp-for="start" class="form-control" type="time"></td>
+        </tr>
+            <tr>
+            <td><label asp-for="end">End</label></td>
+            <td><input asp-for="end" class="form-control" type="time"></td>
+        </tr>
+    </table>
+    <button type="submit" class="btn btn-primary">Confirm</button>
+</form>

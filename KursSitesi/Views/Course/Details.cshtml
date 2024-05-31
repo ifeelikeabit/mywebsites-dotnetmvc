@@ -1,0 +1,190 @@
+@model CourseStudentsViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .card-header {
+            background-color: #007bff;
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 20px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .table {
+            margin: 0;
+        }
+
+        .table th,
+        .table td {
+            border-top: none;
+        }
+
+        .table th {
+            width: 150px;
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        .table td {
+            vertical-align: middle;
+        }
+
+        .bi-arrow-right-short {
+            font-size: 20px;
+            color: #007bff;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .students-teachers-list a {
+            display: block;
+            padding: 10px 0;
+        }
+
+        .students-teachers-list a:not(:last-child) {
+            border-bottom: 1px solid #f2f2f2;
+        }
+
+        .students-teachers-list {
+            padding: 10px 0;
+        }
+
+        /* Animation */
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @@keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card fade-in">
+            <div class="card-header">
+                @Model.Course.CourseName Dersi
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <tr>
+                        <th>Course Id</th>
+                        <td><i class="bi bi-arrow-right-short"></i></td>
+                        <td>@Model.Course.CourseId</td>
+                    </tr>
+                    <tr>
+                        <th>Kurs Adı</th>
+                        <td><i class="bi bi-arrow-right-short"></i></td>
+                        <td>@Model.Course.CourseName</td>
+                    </tr>
+                    <tr>
+                        <th>Kayıt Sayısı</th>
+                        <td><i class="bi bi-arrow-right-short"></i></td>
+                        <td>@Model.EnrolledStudents.Count()</td>
+                    </tr>
+                    <tr>
+                        <th>Kurs Tarihi</th>
+                        <td><i class="bi bi-arrow-right-short"></i></td>
+                        <td>@Model.Course.CourseTime.ToString()</td>
+                    </tr>
+                    <tr>
+                        <th>Başlangıç</th>
+                        <td><i class="bi bi-arrow-right-short"></i></td>
+                        <td>@Model.Course.start.ToString("hh:mm tt")</td>
+                    </tr>
+                    <tr>
+                        <th>Bitiş</th>
+                        <td><i class="bi bi-arrow-right-short"></i></td>
+                        <td>@Model.Course.end.ToString("hh:mm tt")</td>
+                    </tr>
+                    <tr>
+                        <th>Teacher/s</th>
+                        <td><i class="bi bi-arrow-right-short"></i></td>
+                        <td>
+                            <div class="students-teachers-list">
+                                @if (Model.EnrolledTeachers != null && Model.EnrolledTeachers.Any())
+                                {
+                                    @foreach (var teacherCourse in Model.EnrolledTeachers)
+                                    {
+                                        <a href="/Teacher/Details/@teacherCourse.StudentId">👨🏻‍🏫@teacherCourse.StudentName</a>
+                                    }
+                                }
+                                else
+                                {
+                                    <span>No teachers are enrolled in this course.</span>
+                                }
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Students</th>
+                        <td><i class="bi bi-arrow-right-short"></i></td>
+                        <td>
+                            <div class="students-teachers-list">
+                                @if (Model.EnrolledStudents != null && Model.EnrolledStudents.Any())
+                                {
+                                    @foreach (var studentCourse in Model.EnrolledStudents)
+                                    {
+                                        <a href="/Student/Details/@studentCourse.StudentId">🎓@studentCourse.StudentName</a>
+                                    }
+                                }
+                                else
+                                {
+                                    <span>No students are enrolled in this course.</span>
+                                }
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

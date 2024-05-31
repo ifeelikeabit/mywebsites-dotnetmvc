@@ -1,0 +1,37 @@
+@model Student
+
+<h2 style="font-size: 24px; font-weight: bold; background-color: #f2f2f2; padding: 10px;">User Update</h2>
+
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="StudentId">
+    <table>
+        <tr>
+            <th>Tanım</th>
+            <th>Bilgi</th>
+        </tr>
+        <tr>
+            <td><label asp-for="StudentName">First Name</label></td>
+            <td><input asp-for="StudentName" class="form-control"></td>
+        </tr>
+        <tr>
+            <td><label asp-for="StudentSurname">Surname</label></td>
+            <td><input asp-for="StudentSurname" class="form-control"></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Email">Email</label></td>
+            <td><input asp-for="Email" class="form-control"></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Adress">Address</label></td>
+            <td><input asp-for="Adress" class="form-control"></td>
+        </tr>
+
+        <tr>
+            <td><label asp-for="phoneNumber">Phone Number</label></td>
+            <td><input asp-for="phoneNumber" class="form-control"></td>
+        </tr>
+    </table>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - My Application</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #fafafa;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .wrapper {
+            display: flex;
+            width: 100%;
+            align-items: stretch;
+        }
+
+        #sidebar {
+            min-width: 250px;
+            max-width: 250px;
+            background: #4B4E6D;
+            color: #fff;
+            transition: all 0.3s;
+        }
+
+        #sidebar.active {
+            margin-left: -250px;
+        }
+
+        #sidebar .sidebar-header {
+            padding: 20px;
+            background: #2C2E3E;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #sidebar .sidebar-header p {
+            margin: 0;
+        }
+
+        #sidebar .logout {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        #sidebar .logout:hover {
+            color: #7386D5;
+        }
+
+        #sidebar ul.components {
+            padding: 20px 0;
+        }
+
+        #sidebar ul li a {
+            color: white;
+            padding: 10px;
+            font-size: 1.1em;
+            display: block;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        #sidebar ul li a:hover {
+            color: #4B4E6D;
+            background: #fff;
+        }
+
+        #sidebar ul li.active>a,
+        a[aria-expanded="true"] {
+            color: #fff;
+            background: #2C2E3E;
+        }
+
+        a[data-toggle="collapse"]::after {
+            content: '\f105';
+            font-family: 'FontAwesome';
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        ul ul a {
+            font-size: 0.9em !important;
+            padding-left: 30px !important;
+            background: #2C2E3E;
+        }
+
+        ul.CTAs {
+            padding: 20px;
+        }
+
+        ul.CTAs a {
+            text-align: center;
+            font-size: 0.9em !important;
+            display: block;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        a.download {
+            background: #fff;
+            color: #4B4E6D;
+        }
+
+        a.article,
+        a.article:hover {
+            background: #2C2E3E !important;
+            color: #fff !important;
+        }
+
+        #content {
+            width: 100%;
+            padding: 20px;
+            min-height: 100vh;
+            transition: all 0.3s;
+        }
+
+        #loginButton {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #loginButton button {
+            background: #4B4E6D;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 10px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        #loginButton button:hover {
+            background: #2C2E3E;
+            transform: scale(1.05);
+        }
+
+        @@media (max-width: 768px) {
+            #sidebar {
+                margin-left: -250px;
+            }
+
+            #sidebar.active {
+                margin-left: 0;
+            }
+
+            #sidebarCollapse span {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        @if (User.IsInRole("Admin"))
+        {
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <p>ADMIN PANEL</p>
+                    <a href="/Account/Logout" class="logout"><i class="bi bi-box-arrow-right"></i> Logout</a>
+                </div>
+                <ul class="list-unstyled components">
+                    <li class="active">
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><b>Student</b></a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li><a asp-controller="Student" asp-action="Index">Student List</a></li>
+                            <li><a asp-controller="Student" asp-action="Create">Student Create</a></li>
+                        </ul>
+                    </li>
+                    <li class="active">
+                        <a href="#homeSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><b>Teacher</b></a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu1">
+                            <li><a asp-controller="Teacher" asp-action="Index">Teacher List</a></li>
+                            <li><a asp-controller="Teacher" asp-action="Create">Teacher Create</a></li>
+                        </ul>
+                    </li>
+                    <li class="active">
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><b>Course</b></a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li><a asp-controller="Course" asp-action="Index">Course List</a></li>
+                            <li><a asp-controller="Course" asp-action="Create">Course Create</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a asp-area="" asp-controller="Home" asp-action="About">About</a>
+                    </li>
+                    <li>
+                        <a asp-area="Course" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                </ul>
+                <ul class="list-unstyled CTAs">
+                    <li><a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a></li>
+                    <li><a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a></li>
+                </ul>
+            </nav>
+        }
+
+        <div id="content">
+            @if (User.IsInRole("Admin"))
+            {
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                        <button type="button" id="sidebarCollapse" class="btn btn-info">
+                            <i class="fa fa-align-left"></i>
+                            <span>Toggle Sidebar</span>
+                        </button>
+                    </div>
+                </nav>
+            }
+
+            <div class="container-fluid">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+</html>

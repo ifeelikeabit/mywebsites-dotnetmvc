@@ -1,0 +1,116 @@
+@model CourseStudentsViewModel
+
+<h2>@Model.Course.CourseName Kursunu Yönet</h2>
+
+<h3>Kayıtlı Öğrenciler</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Student Id</th>
+            <th>Student Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model.EnrolledStudents)
+        {
+            <tr>
+                <td>@student.StudentId</td>
+                <td>@student.StudentName</td>
+                <td>
+                    <form asp-action="Unenroll" asp-route-courseId="@Model.Course.CourseId" asp-route-studentId="@student.StudentId" method="post"
+                          onsubmit="return confirm('Are you sure you want to unenroll this student?')">
+                        <button type="submit" class="btn btn-danger btn-sm">Unenroll</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<h3>Kayıtlı Öğretmenler</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Teacher Id</th>
+            <th>Teacher Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var teacher in Model.EnrolledTeachers)
+        {
+            <tr>
+                <td>@teacher.StudentId</td>
+                <td>@teacher.StudentName</td>
+                <td>
+                    <form asp-action="Unenroll" asp-route-courseId="@Model.Course.CourseId" asp-route-studentId="@teacher.StudentId" method="post"
+                          onsubmit="return confirm('Are you sure you want to unenroll this teacher?')">
+                        <button type="submit" class="btn btn-danger btn-sm">Unenroll</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<h3>All Students</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Student Id</th>
+            <th>Student NameCourse</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model.Students)
+        {
+            <tr>
+                <td>@student.StudentId</td>
+                <td>@student.StudentName</td>
+                <td>
+                    @if (!Model.EnrolledStudents.Any(es => es.StudentId == student.StudentId))
+                    {
+                        <form asp-action="Enroll" asp-route-courseId="@Model.Course.CourseId" asp-route-studentId="@student.StudentId" method="post">
+                            <button type="submit" class="btn btn-success btn-sm">Enroll</button>
+                        </form>
+                    }
+                    else
+                    {
+                        <span>Already Enrolled</span>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<h3>All Teachers</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Teacher Id</th>
+            <th>Teacher Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var teacher in Model.Teachers)
+        {
+            <tr>
+                <td>@teacher.StudentId</td>
+                <td>@teacher.StudentName</td>
+                <td>
+                    @if (!Model.EnrolledTeachers.Any(es => es.StudentId == teacher.StudentId))
+                    {
+                        <form asp-action="Enroll" asp-route-courseId="@Model.Course.CourseId" asp-route-studentId="@teacher.StudentId" method="post">
+                            <button type="submit" class="btn btn-success btn-sm">Enroll</button>
+                        </form>
+                    }
+                    else
+                    {
+                        <span>Already Enrolled</span>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

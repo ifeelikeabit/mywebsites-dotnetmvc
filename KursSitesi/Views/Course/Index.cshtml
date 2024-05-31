@@ -1,0 +1,41 @@
+@model IEnumerable<Course>
+
+<h2>Course List</h2>
+   <a href="/Course/Create" class="btn btn-primary">Add Course</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Course Id</th>
+            <th>Course Name</th>
+            <th>Registered Students</th>
+            <th>Course Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (!Model.Any())
+        {
+            <tr>
+                <td colspan="5" class="text-center">No course found</td>
+            </tr>
+        }
+        @foreach (var course in Model)
+        {
+            <tr>
+                <td>@course.CourseId</td>
+                <td>@course.CourseName</td>
+                <td>@course.Enrolments.Count()</td>
+                <td>@course.CourseTime</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@course.CourseId" class="btn btn-sm btn-primary">Details</a>
+                    <form asp-action="Delete" asp-route-id="@course.CourseId" method="post"
+                          onsubmit="return confirm('Are you sure?')" style="display: inline-block;">
+                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                    </form>
+                    <a asp-action="ManageStudents" asp-route-id="@course.CourseId" class="btn btn-sm btn-primary">Manage Students</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

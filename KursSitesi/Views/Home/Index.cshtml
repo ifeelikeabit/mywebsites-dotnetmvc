@@ -1,0 +1,138 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="search-container">
+    <h2 class="result">Not: bu site admin tabanlı olduğu için test için eklenmiş olan (1-♾️ rastgele)ID'ler arasından arama yapabilirsiniz,admin
+        paneline
+        ulaşmak için <b style="color:red">berke@@gmail.com</b> dan giriş bilgilerini isteyebilirsiniz
+    </h2>
+    <form asp-action="Search" method="post" class="search-form">
+        <input type="number" name="id" class="search-input" placeholder="ID giriniz" required />
+        <button type="submit" class="search-button">Ara</button>
+    </form>
+</div>
+    <form asp-action="List" method="get" class="search-form">
+        <button type="submit" class="search-button">Dersleri Görüntüle</button>
+    </form>
+
+
+@if (ViewData["SearchedId"] != null)
+{
+    <div class="result">
+    <p>Girdiğiniz ID hatalı. Lütfen ID'yi tekrar kontrol ediniz.<br>Girdiğiniz ID: @ViewData["SearchedId"]</p>
+</div>
+}
+
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: #fafafa;
+        background-image: url('/path/to/your/image.png');
+        /* Arka plan resmi */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('https://trthaberstatic.cdn.wp.trt.com.tr/resimler/1978000/rami-1978183.jpg');
+    }
+
+    .search-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .search-form {
+        display: flex;
+        align-items: center;
+    }
+
+    .search-input {
+        padding: 10px;
+        font-size: 1.2em;
+        border: 2px solid #7386D5;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+
+    .search-button {
+        padding: 10px 20px;
+        font-size: 1.2em;
+        border: none;
+        background-color: #7386D5;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .search-button:hover {
+        background-color: #6d7fcc;
+    }
+
+    .result {
+        margin-top: 20px;
+        padding: 15px;
+        font-size: 1.2em;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.7);
+        /* Yarı saydam siyah arka plan */
+        border-radius: 10px;
+        text-align: center;
+        max-width: 500px;
+        margin: 20px auto;
+    }
+
+    .navbar {
+        background-color: transparent !important;
+    }
+
+    .btn-info {
+        background-color: #7386D5;
+        border-color: #7386D5;
+        color: white;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    .btn-info:hover {
+        background-color: #6d7fcc;
+        border-color: #6d7fcc;
+    }
+
+    .login-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .login-button {
+        background-color: #7386D5;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        font-size: 1.2em;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .login-button i {
+        margin-right: 10px;
+    }
+
+    .login-button:hover {
+        background-color: #6d7fcc;
+    }
+</style>
+
+<div class="login-container">
+    <a href="/Account/Login" class="login-button">
+        <i class="bi bi-person-circle"></i> Login
+    </a>
+</div>

@@ -1,0 +1,72 @@
+@model Student
+
+<h2>Teacher Information</h2>
+<table class="table">
+    <tr>
+        <th>Field</th>
+        <th></th>
+        <th>Value</th>
+    </tr>
+    <tr>
+        <td>ID</td>
+        <th></th>
+        <td>@Model.StudentId</td>
+    </tr>
+    <tr>
+        <td>Firstname</td>
+        <th></th>
+        <td>@Model.StudentName</td>
+    </tr>
+    <tr>
+        <td>Surname</td>
+        <th></th>
+        <td>@Model.StudentSurname</td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <th></th>
+        <td>@Model.Email</td>
+    </tr>
+    <tr>
+        <td>Address</td>
+        <th></th>
+        <td>@Model.Adress</td>
+    </tr>
+    <tr>
+        <td>Phone Number</td>
+        <th></th>
+        <td>@Model.phoneNumber</td>
+    </tr>
+</table>
+
+<h3>Enrolled Courses</h3>
+@if (Model.Enrolments != null && Model.Enrolments.Any())
+{
+    <table class="table">
+    <thead>
+        <tr>
+            <th>Course Id</th>
+            <th>Course Name</th>
+            <th>Course Date</th>
+            <th>Start</th>
+            <th>End</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var studentCourse in Model.Enrolments)
+            {
+                <tr>
+                    <td>@studentCourse.Courses.CourseId</td>
+                    <td>@studentCourse.Courses.CourseName</td>
+                    <td>@studentCourse.Courses.CourseTime</td>
+                    <td>@studentCourse.Courses.start.ToString("hh:mm tt")</td>
+                    <td> @studentCourse.Courses.end.ToString("hh:mm tt")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>This student is not enrolled in any courses.</p>
+}
