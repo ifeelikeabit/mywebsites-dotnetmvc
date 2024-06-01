@@ -7,7 +7,7 @@ namespace bordro.Models
 
     public class EditViewModel
     {   
-        public string Id { get; set; } 
+        public string? Id { get; set; } 
         public string UserName { get; set; } = string.Empty;
 
         [DataType(DataType.Password)]

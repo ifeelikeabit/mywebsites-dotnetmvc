@@ -110,6 +110,7 @@ public class CompanyController : Controller
         {
             return RedirectToAction("Index");
         }
+        
         if (ModelState.IsValid)
         {
             var user = await _usermanager.FindByIdAsync(model.Id);
@@ -127,8 +128,11 @@ public class CompanyController : Controller
 
                 if (result.Succeeded)
                 {
-
-                    return RedirectToAction("Index");
+                    if(!User.IsInRole("admin"))
+                    {_signinmanager.SignOutAsync();
+                    return RedirectToAction("Login","Account");                    
+                    }
+                    return RedirectToAction("Index","Company");
                 }
                 foreach (IdentityError err in result.Errors)
                 {
