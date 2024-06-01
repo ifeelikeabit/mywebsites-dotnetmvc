@@ -1,0 +1,102 @@
+﻿@{
+    ViewData["Title"] = "Ana Sayfa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        margin: 0;
+        background-image: url('https://images.unsplash.com/photo-1542281286-9e0a16bb7366'); /* Canlı bir arka plan resmi */
+        background-size: cover;
+        background-position: center;
+        font-family: 'Helvetica Neue', Arial, sans-serif; /* Modern bir font ailesi */
+        color: white;
+    }
+
+    #adminPanel {
+        width: 250px;
+        background-color: #343a40;
+        color: white;
+        height: 100%;
+        position: fixed;
+        padding-top: 1rem;
+        display: none; /* Admin panel default olarak gizlenmiş */
+    }
+
+    #adminPanel .nav-link {
+        color: white;
+        margin: 0.5rem 0;
+    }
+
+    #adminPanel .nav-link:hover {
+        background-color: #495057;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 2rem;
+        flex: 1;
+    }
+
+    .footer {
+        background-color: #f8f9fa;
+        padding: 1rem 0;
+        text-align: center;
+        margin-top: auto;
+    }
+
+    .container {
+        text-align: center;
+        padding: 4rem;
+        background: rgba(0, 0, 0, 0.6); /* Daha koyu yarı şeffaf arka plan kutusu */
+        border-radius: 10px;
+        margin-top: 10%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hafif gölge ekleyerek derinlik katma */
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 15px 30px;
+        margin: 10px;
+        font-size: 16px;
+        color: white;
+        background-color: #28a745; /* Canlı bir yeşil renk */
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease; /* Hover ve active durumları için animasyon */
+    }
+
+    .btn:hover {
+        background-color: #218838; /* Daha koyu yeşil */
+        transform: scale(1.05); /* Hafif büyüme efekti */
+    }
+
+    .btn:active {
+        background-color: #1e7e34; /* Daha koyu yeşil */
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: #ffd700; /* Altın sarısı */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Hafif gölge ile yazıya derinlik katma */
+    }
+
+    p {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        color: #f5f5f5; /* Beyaz tonları */
+    }
+</style>
+
+<div class="container">
+    <h1>Hoş Geldiniz! 🌟</h1>
+    <p>Bordro hesaplama sistemimize hoş geldiniz. Lütfen aşağıdaki seçeneklerden birini seçin.</p>
+    <a href="/Account/Register" class="btn">Şirket Oluştur ✨</a>
+    <a href="/Account/Login" class="btn">Giriş Yap 🚪</a>
+</div>

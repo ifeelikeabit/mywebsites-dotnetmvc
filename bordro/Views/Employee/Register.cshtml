@@ -1,0 +1,41 @@
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model EmployeeViewModel
+
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow p-4" style="width: 22rem;">
+        <h3 class="card-title text-center mb-4">🌟Yeni Çalışan🌟 👔🛠️</h3>
+        <form asp-action="Register" method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group mb-3">
+                <label asp-for="TaxNumber">🧾Vergi Numarası</label>
+                <input asp-for="TaxNumber" class="form-control" required />
+                <span asp-validation-for="TaxNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="Name">🖊️İsim</label>
+                <input asp-for="Name" class="form-control" required />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="Surname">🖊️Soyisim</label>
+                <input asp-for="Surname" class="form-control" required />
+                <span asp-validation-for="Surname" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="DailysSalary">🖊️Günlük ücret</label>
+                <input asp-for="DailysSalary" class="form-control" required />
+                <span asp-validation-for="DailysSalary" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="EntryDate">🖊️İşe giriş tarihi</label>
+                <input asp-for="EntryDate" type="date" class="form-control" required />
+                <span asp-validation-for="EntryDate" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary mb-2 w-100">Çalışan Oluştur</button>
+             <a href="@Url.Action("Index", "Employee")" class="btn w-100 btn-primary">Geri Dön</a>
+        </form>
+    </div>
+</div>

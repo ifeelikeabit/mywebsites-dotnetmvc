@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - bordro</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <style>
+        body {
+            display: flex;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .sidebar {
+            height: 100vh;
+            width: 250px;
+            background-color: #343a40;
+            color: white;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            top: 0;
+            left: 0;
+        }
+
+        .sidebar .nav-link {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .sidebar .nav-link:hover {
+            color: white;
+        }
+
+        .sidebar .nav-link.active {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .main-content {
+            flex-grow: 1;
+            margin-left: 250px;
+            padding: 20px;
+        }
+
+        .footer {
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            background-color: white;
+            text-align: center;
+            border-top: 1px solid #ddd;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div>
+            <h4 class="p-3">⭐@User.Identity.Name</h4>
+            <ul class="nav flex-column">
+                @if (!User.Identity.IsAuthenticated)
+                {
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/Index"><i class="bi bi-house-door"></i> 🏡 Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-area="" asp-controller="Account" asp-action="Login">🔑 Giriş
+                            Yap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-area="" asp-controller="Account" asp-action="Register">📝Kayıt
+                            Ol</a>
+                    </li>
+                }
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-area="" asp-controller="Account" asp-action="Logout">🚪 Çıkış
+                            Yap</a>
+                    </li>
+                }
+                @if (User.IsInRole("admin"))
+                {
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-area="" asp-controller="Company" asp-action="Index">🏢 Şirket
+                            Listesi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-area="" asp-controller="Company" asp-action="Register">➕ Şirket
+                            Oluştur</a>
+                    </li>
+                }
+                @if (User.Identity.IsAuthenticated && !User.IsInRole("admin"))
+                {
+
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-area="" asp-controller="Company" asp-action="Edit" asp-route-name="@User.Identity.Name">✏️ Şirketi
+                            Düzenle</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-area="" asp-controller="Employee" asp-action="Index">👥 Çalışan
+                            Listesi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-area="" asp-controller="Employee" asp-action="Register">➕ Çalışan
+                            Oluştur</a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+    <div class="main-content">
+        @RenderBody()
+    </div>
+    <footer class="footer">
+
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+
+</html>

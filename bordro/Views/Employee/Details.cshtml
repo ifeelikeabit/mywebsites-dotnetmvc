@@ -1,0 +1,37 @@
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model bordro.Data.Employee
+
+<h2>Çalışan Detayları</h2>
+
+<div>
+    <h4>@Model.FullName</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Vergi Numarası</dt>
+        <dd class="col-sm-10">@Model.TaxNumber</dd>
+
+        <dt class="col-sm-2">Şirket</dt>
+        <dd class="col-sm-10">@Model.CompanyName</dd>
+
+        <dt class="col-sm-2">İsim</dt>
+        <dd class="col-sm-10">@Model.Name</dd>
+
+        <dt class="col-sm-2">Soyisim</dt>
+        <dd class="col-sm-10">@Model.Surname</dd>
+
+        <dt class="col-sm-2">Günlük Ücret</dt>
+        <dd class="col-sm-10">@Model.DailysSalary</dd>
+
+        <dt class="col-sm-2">Giriş Tarihi</dt>
+        <dd class="col-sm-10">@Model.EntryDate.ToShortDateString()</dd>
+    </dl>
+</div>
+
+<div>
+    <a asp-action="Bordro" asp-route-id="@Model.TaxNumber" class="btn btn-sm btn-primary">Bordro Hesapla</a>
+    <a href="@Url.Action("Index", "Employee")" class="btn btn-sm btn-primary">Geri Dön</a>
+</div>

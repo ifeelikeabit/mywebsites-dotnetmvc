@@ -1,0 +1,68 @@
+@model Bordro
+
+
+@if (@Model.isCalculate == false)
+{
+  <div class="d-flex justify-content-center align-items-center ">
+  <div class="card shadow p-4" style="width: 34rem;">
+    <h3 class="card-title text-center mb-4">Bordro Hesapmala</h3>
+
+    <form method="post">
+      <input type="hidden" asp-for="id" />
+      <div class="form-group mb-3" style="width: 300px;">
+        <label asp-for="day">Çalışılan Gün</label>
+        <input class="form-control" asp-for="day" required />
+      </div>
+      <div class="form-group mb-3" style="width: 300px;">
+        <label asp-for="kesintiler">Kesintiler</label>
+        <input placeholder="Vergi+Sigorta" class="form-control" asp-for="kesintiler" required />
+      </div>
+      <button type="submit" class="btn btn-primary w-50">🚀 Hesapla</button>
+       <a href="@Url.Action("Index", "Employee")" class="btn btn-primary">Geri Dön</a>
+    </form>
+  </div>
+</div>
+}
+
+
+
+@if (@Model.isCalculate == true)
+{
+ <div class="d-flex justify-content-center align-items-center ">
+    <div class="card shadow p-4" style="width: 50rem;">
+        <h3 class="card-title text-center mb-4">📜 @Model.employee.FullName Bordro Bilgisi</h3>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">🧾 Vergi Numarası</dt>
+            <dd class="col-sm-10">@Model.employee.TaxNumber</dd>
+            <hr class="col-12" />
+
+            <dt class="col-sm-2">🏢 Şirket</dt>
+            <dd class="col-sm-10">@Model.employee.CompanyName</dd>
+            <hr class="col-12" />
+
+            <dt class="col-sm-2">💵 Günlük Ücret</dt>
+            <dd class="col-sm-10">@Model.employee.DailysSalary</dd>
+            <hr class="col-12" />
+
+            <dt class="col-sm-2">📅 Giriş Tarihi</dt>
+            <dd class="col-sm-10">@Model.employee.EntryDate.ToShortDateString()</dd>
+            <hr class="col-12" />
+
+            <dt class="col-sm-2">💰 Net Ücret</dt>
+            <dd class="col-sm-10">@Model.brüt</dd>
+            <hr class="col-12" />
+
+            <dt class="col-sm-2">📊 Bordro</dt>
+            <dd class="col-sm-10">@Model.bordro</dd>
+            <hr class="col-12" />
+
+            <dt class="col-sm-2">📉 Kesintiler</dt><dd class="col-sm-10">@Model.kesintiler</dd>
+            <dt class="col-sm-2">(Vergi + Sigorta)</dt>
+            <hr class="col-12" />
+        </dl>
+    </div>
+</div>
+
+
+}

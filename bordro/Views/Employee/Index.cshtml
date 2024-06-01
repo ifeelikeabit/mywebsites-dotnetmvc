@@ -1,0 +1,44 @@
+@using Microsoft.AspNetCore.Identity
+@model IEnumerable<bordro.Data.Employee>
+
+<h2>Çalışan Listesi</h2>
+
+<div><a href="Employee/Register" class="btn btn-sm btn-primary">Yeni Çalışan</a></div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Vergi Numarası</th>
+            <th>İsim-Soyisim</th>
+            <th>Günlük Ücret</th>
+            <th>Şirket</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (!Model.Any())
+        {
+            <tr>
+                <td colspan="4" class="text-center">Çalışan Yok</td>
+            </tr>
+        }
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.TaxNumber</td>
+                <td>@user.FullName</td>
+                <td>@user.DailysSalary</td>
+                <td>@user.CompanyName</td>
+                <td>
+                    <a asp-action="Bordro" asp-route-id="@user.TaxNumber" class="btn btn-sm btn-primary">Bordro Hesapla</a>
+                    <a asp-action="Details" asp-route-id="@user.TaxNumber" class="btn btn-sm btn-primary">Detaylar</a>
+                    <a asp-action="Edit" asp-route-id="@user.TaxNumber" class="btn btn-sm btn-primary">Düzenle</a>
+
+                    <form asp-action="Delete" method="post" onsubmit="return confirm('Emin misiniz?')"
+                        style="display: inline-block;">
+                        <input type="hidden" name="taxnumber" value="@user.TaxNumber">
+                        <button type="submit" class="btn btn-danger btn-sm">Sil</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

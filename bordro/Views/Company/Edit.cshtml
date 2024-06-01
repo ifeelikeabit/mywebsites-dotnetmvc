@@ -1,0 +1,28 @@
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model EditViewModel
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow p-4" style="width: 22rem;">
+        <h3 class="card-title text-center mb-4">Şirketin Bilgilerini Düzenle 🛠️</h3>
+        <form asp-action="Edit" method="post">
+             <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group mb-3">
+                <label asp-for="UserName">🖊️ Şirket Adı </label>
+                <input  asp-for="UserName" class="form-control"  required />
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="Password">🖊️ Şifre</label>
+                <input type="password" class="form-control" asp-for="Password"  />
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="ConfirmPassword"> 🖊️Tekrar Şifre</label>
+                <input type="password" class="form-control" asp-for="ConfirmPassword" />
+            </div>
+            <button type="submit" class="btn btn-primary m-2 w-90">Değişiklikleri Kaydet</button>
+             <a href="@Url.Action("Index", "Employee")" class="btn btn-primary w-90d">Geri Dön</a>
+               
+        </form>
+    </div>
+</div>
