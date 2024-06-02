@@ -1,0 +1,17 @@
+@model mowbank.Models.AppUser
+
+<h2>Profile</h2>
+
+<table class="table">
+    <tr>
+        <th>Username</th>
+        <td>@Model.UserName</td>
+    </tr>
+    <tr>
+        <th>Email</th>
+        <td>@Model.Email</td>
+    </tr>
+    <!-- Diğer kullanıcı bilgilerini de burada gösterebilirsiniz -->
+</table>
+
+<a asp-action="Edit" class="btn btn-primary">Edit Profile</a>

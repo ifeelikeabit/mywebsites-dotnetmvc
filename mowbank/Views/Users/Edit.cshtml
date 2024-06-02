@@ -1,0 +1,39 @@
+@model EditViewModel
+<div
+    style="width: 100%;display:flex; flex-direction: column;align-items: center; min-height: 80vh;justify-content: center;">
+    <h2>Kullanıcıyı Düzenle</h2>
+
+    <form asp-action="Edit" method="post" class="shadow-lg p-3 mb-5 bg-white rounded"
+        style="width: 400px; display:flex; flex-direction: column;align-items: center;">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <input type="hidden" name="Id" value="@Model.Id">
+        <div class="mb-3" style="width: 300px;">
+            <label asp-for="UserName"></label>
+            <input class="form-control" asp-for="UserName">
+        </div>
+        <div class="mb-3" style="width: 300px;">
+            <label asp-for="Email"></label>
+            <input class="form-control" asp-for="Email">
+        </div>
+        <div class="card" style="width: 300px;">
+            <div class="card-header">
+                Parola Güncelle
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label asp-for="Password"></label>
+                    <input class="form-control" asp-for="Password">
+                </div>
+                <div class="mb-3">
+                    <label asp-for="ConfirmPassword"></label>
+                    <input class="form-control" asp-for="ConfirmPassword">
+                </div>
+            </div>
+        </div>
+
+        <div style="width: 300px;" class="mt-2">
+            <button type="submits" class="btn btn-success mb-1" style="width: 300px;">Kaydet</button>
+
+        </div>
+    </form>
+</div>

@@ -1,0 +1,61 @@
+@model mowbank.ViewModels.EditViewModel
+<div
+    style="width: 100%;display:flex; flex-direction: column;align-items: center; min-height: 80vh;justify-content: center;">
+    <h2>Kullanıcı Bilgileri</h2>
+    <table class="table table-striped shadow-lg p-3 mb-5 bg-white rounded"
+        style="width: 300px; display:flex; flex-direction: column;align-items: center;">
+
+       
+            <a asp-action="Edit" asp-controller="Profile" asp-route-id="@Model.Id" class="btn btn-primary"
+                style="width: 300px;">Profili Düzenle</a>
+        
+        <tr>
+            <th>Alan</th>
+            <th>Değer</th>
+        </tr>
+        <tr>
+            <td>Tam Ad: </td>
+            <td>@Model.Full_Name</td>
+        </tr>
+        <tr>
+            <td>Email: </td>
+            <td>@Model.Email</td>
+        </tr>
+        <tr>
+            <td>Adres: </td>
+            <td>@Model.Adress</td>
+        </tr>
+        <tr>
+            <td>İş: </td>
+            <td>@Model.Job</td>
+        </tr>
+        <tr>
+            <td>Yaş: </td>
+            <td>@Model.age</td>
+        </tr>
+        <tr>
+            <td>Cinsiyet: </td>
+            <td>@Model.gender</td>
+        </tr>
+        <tr>
+            <td>Biyografi: </td>
+            <td>@Model.bio</td>
+        </tr>
+        <tr>
+            <td>Hobi: </td>
+            <td>@Model.hobby</td>
+        </tr>
+        <tr>
+            <td>Milliyet: </td>
+            <td>@Model.nationality</td>
+        </tr>
+        <tr>
+            <td>Maaş: </td>
+            <td>@Model.salary</td>
+        </tr>
+        <tr>
+            <td>Medeni hal: </td>
+            <td>@Model.marital_status</td>
+        </tr>
+    </table>
+</div>

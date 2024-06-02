@@ -1,0 +1,28 @@
+@using mowbank.Models
+@model LoginViewModel
+<div
+    style="width: 100%;display:flex; flex-direction: column;align-items: center; min-height: 80vh;justify-content: center;">
+    <h2>Giriş Yap</h2>
+    <form asp-action="Login" method="post" class="shadow-lg p-3 mb-5 bg-white rounded"
+        style="width: 400px; display:flex; flex-direction: column;align-items: center;">
+
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="mb-3" style="width: 300px;">
+            <label asp-for="UserName"></label>
+            <input class="form-control" asp-for="UserName">
+        </div>
+        <div class="mb-3" style="width: 300px;">
+            <label asp-for="Password"></label>
+            <input class="form-control" asp-for="Password">
+        </div>
+
+        <div class="form-check mb-3" style="width: 300px;">
+            <label asp-for="RememberMe" class="form-check-label"></label>
+            <input class="form-check-input" asp-for="RememberMe">
+        </div>
+        <div style="width: 300px;"> <button type="submits" class="btn btn-success mb-1" style="width: 300px;">Giriş
+                Yap</button>
+            <a href="/Account/Create" class="btn btn-warning" style="width: 300px;">Yeni Hesap Oluştur</a>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mowbank - Kullanıcı Bilgi Bankası</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+    <style>
+        .hero {
+            background-image: url('https://parade.com/.image/t_share/MTkwNTgxNDY5Mzk2NjczNjYx/earth-facts-jpg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .feature {
+            padding: 50px 0;
+        }
+
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bg-primary text-white text-center py-3">
+        <div class="container">
+            <h1>mowbank</h1>
+            <p>Kullanıcı Bilgi Bankası</p>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="container">
+            <h1>mowbank'a Hoş Geldiniz</h1>
+            <p>Kullanıcı bilgilerini güvenli ve düzenli bir şekilde saklayın ve yönetin.</p>
+            <a href="#features" class="btn btn-light btn-lg">Daha Fazlasını Keşfet</a>
+        </div>
+    </div>
+
+    <div id="features" class="feature text-center">
+        <div class="container">
+            <h2>Özellikler</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="https://st2.depositphotos.com/1637332/6232/i/450/depositphotos_62328261-stock-photo-man-with-chart-online-icon.jpg"
+                        alt="Özellik 1" class="img-fluid rounded-circle mb-3">
+                    <h3>Kolay Yönetim</h3>
+                    <p>Kullanıcı bilgilerini kolayca yönetmenizi sağlayan sezgisel bir arayüz.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMhGxPCB7WBXL1V6YEWrSh1kFRMG1Pkz95Qw&s"
+                        alt="Özellik 2" class="img-fluid rounded-circle mb-3">
+                    <h3>Güvenli Depolama</h3>
+                    <p>Bilgilerinizi güvenli bir şekilde saklar ve yetkisiz erişime karşı korur.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVBqLTq-EGB2uXCgOSEu7dySP3UuZVW6axsShItNVW3w&s"
+                        alt="Özellik 3" class="img-fluid rounded-circle mb-3">
+                    <h3>Kullanıcı Arama</h3>
+                    <p>Arama özelliği ile kullanıcı bilgilerine hızlıca erişin.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="feature bg-light text-center">
+        <div class="container">
+            <h2>Hakkımızda</h2>
+            <p>mowbank, kullanıcı bilgilerini güvenli bir şekilde saklama ve yönetme konularında uzmanlaşmış bir
+                platformdur. Modern ve kullanıcı dostu arayüzümüz ile bilgilerinizi her zaman elinizin altında tutarız.
+            </p>
+            <a href="/Home/About" class="btn btn-primary">Daha Fazla Bilgi</a>
+        </div>
+    </div>
+
+    <div class="feature text-center">
+        <div class="container">
+            <h2>Başlayın</h2>
+            <p>mowbank ile kullanıcı bilgilerinizi yönetmeye hemen başlayın.</p>
+            @if (!User.Identity?.IsAuthenticated == true)
+            {
+                <a href="/Account/Login" class="btn btn-success btn-lg">Haydi Başlayalım</a>
+            }
+            else
+            {
+                <a href="/Profile/Detailed" class="btn btn-success btn-lg">Haydi Başlayalım</a>
+            }
+        </div>
+    </div>
+
+    <footer class="footer text-center">
+        <div class="container">
+            <p>&copy; 2024 mowbank. Tüm Hakları Saklıdır.</p>
+            <a href="/Home/Privacy">Gizlilik Politikası</a>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

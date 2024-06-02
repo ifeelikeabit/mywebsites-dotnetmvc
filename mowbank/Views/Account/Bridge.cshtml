@@ -1,0 +1,25 @@
+<h2>Yetkisiz giriş isteği gönderdiniz</h2>
+@if (User.Identity?.IsAuthenticated == true)
+{
+    <div class="alert alert-warning" role="alert">
+    Bir sorun olduğunu düşünyorsanız yetkilendirme işlemleri için Admin ile iletişime geçiniz.
+    Eposta:
+    <a href="">admin@admin.me</a>
+    <a href="/Profile/Detailed">Profile sayfasına git</a>
+    </div>
+}
+else
+{
+     <div class="alert alert-danger" role="alert">
+        Bu alana erişmek için lütfen giriş yapınız. <a href="/Account/Login">Giriş</a>
+    </div>
+    <div class="alert alert-warning" role="alert">
+    Başka bir sorun olduğunu düşünyorsanız yetkilendirme işlemleri için Admin ile iletişime geçiniz.
+    Eposta:
+    <a href="">admin@admin.me</a>
+</div>
+}
+
+<div></div>
+
+
