@@ -1,3 +1,6 @@
+# ASP .NET MVC İle Kodlanmıştır
+
+
 # MyGardenShip 🌱
 Tanım: Hal takip sistemi
 
