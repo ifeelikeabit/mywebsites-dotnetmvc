@@ -170,7 +170,7 @@ Tanım: Kullanıcı bilgi sistemi, veri takibi
       <a href="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/mowbank/transaction.png">
         <img src="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/mowbank/transaction.png" width="200"/>
       </a>
-      <br>Transaction
+      <br>Welcome
     </td>
     <td align="center">
       <a href="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/mowbank/report.png">
