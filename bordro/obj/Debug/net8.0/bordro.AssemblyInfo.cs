@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("bordro")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+49a2784b1e9c552a395b046693959079dc5ba088")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0a39847f531a151fff0847c93ceba0de1576c25c")]
 [assembly: System.Reflection.AssemblyProductAttribute("bordro")]
 [assembly: System.Reflection.AssemblyTitleAttribute("bordro")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

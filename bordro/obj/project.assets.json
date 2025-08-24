@@ -4557,19 +4557,19 @@
     ]
   },
   "packageFolders": {
-    "/home/mewasme/.nuget/packages/": {}
+    "/home/esat/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/mewasme/perfect/bordro/bordro.csproj",
+      "projectUniqueName": "/home/esat/dump/mywebsites-dotnetmvc/bordro/bordro.csproj",
       "projectName": "bordro",
-      "projectPath": "/home/mewasme/perfect/bordro/bordro.csproj",
-      "packagesPath": "/home/mewasme/.nuget/packages/",
-      "outputPath": "/home/mewasme/perfect/bordro/obj/",
+      "projectPath": "/home/esat/dump/mywebsites-dotnetmvc/bordro/bordro.csproj",
+      "packagesPath": "/home/esat/.nuget/packages/",
+      "outputPath": "/home/esat/dump/mywebsites-dotnetmvc/bordro/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/mewasme/.nuget/NuGet/NuGet.Config"
+        "/home/esat/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -4626,7 +4626,7 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.4, 8.0.4]"
+            "version": "[8.0.19, 8.0.19]"
           }
         ],
         "frameworkReferences": {
@@ -4637,7 +4637,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.104/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.119/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -9,83 +9,83 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = bordro
 build_property.RootNamespace = bordro
-build_property.ProjectDir = /home/mewasme/perfect/bordro/
+build_property.ProjectDir = /home/esat/dump/mywebsites-dotnetmvc/bordro/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /home/mewasme/perfect/bordro
+build_property.MSBuildProjectDirectory = /home/esat/dump/mywebsites-dotnetmvc/bordro
 build_property._RazorSourceGeneratorDebug = 
 
-[/home/mewasme/perfect/bordro/Views/Account/Index.cshtml]
+[/home/esat/dump/mywebsites-dotnetmvc/bordro/Views/Account/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/mewasme/perfect/bordro/Views/Account/Login.cshtml]
+[/home/esat/dump/mywebsites-dotnetmvc/bordro/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9Mb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/mewasme/perfect/bordro/Views/Account/Register.cshtml]
+[/home/esat/dump/mywebsites-dotnetmvc/bordro/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9SZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/mewasme/perfect/bordro/Views/Company/Edit.cshtml]
+[/home/esat/dump/mywebsites-dotnetmvc/bordro/Views/Company/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tcGFueS9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/mewasme/perfect/bordro/Views/Company/Index.cshtml]
+[/home/esat/dump/mywebsites-dotnetmvc/bordro/Views/Company/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tcGFueS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/mewasme/perfect/bordro/Views/Company/Register.cshtml]
+[/home/esat/dump/mywebsites-dotnetmvc/bordro/Views/Company/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tcGFueS9SZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/mewasme/perfect/bordro/Views/Employee/Bordro.cshtml]
+[/home/esat/dump/mywebsites-dotnetmvc/bordro/Views/Employee/Bordro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW1wbG95ZWUvQm9yZHJvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/mewasme/perfect/bordro/Views/Employee/Details.cshtml]
+[/home/esat/dump/mywebsites-dotnetmvc/bordro/Views/Employee/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW1wbG95ZWUvRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/mewasme/perfect/bordro/Views/Employee/Edit.cshtml]
+[/home/esat/dump/mywebsites-dotnetmvc/bordro/Views/Employee/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW1wbG95ZWUvRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/mewasme/perfect/bordro/Views/Employee/Index.cshtml]
+[/home/esat/dump/mywebsites-dotnetmvc/bordro/Views/Employee/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW1wbG95ZWUvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/mewasme/perfect/bordro/Views/Employee/Register.cshtml]
+[/home/esat/dump/mywebsites-dotnetmvc/bordro/Views/Employee/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW1wbG95ZWUvUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/mewasme/perfect/bordro/Views/Home/Index.cshtml]
+[/home/esat/dump/mywebsites-dotnetmvc/bordro/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/mewasme/perfect/bordro/Views/Home/Privacy.cshtml]
+[/home/esat/dump/mywebsites-dotnetmvc/bordro/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/mewasme/perfect/bordro/Views/Shared/Error.cshtml]
+[/home/esat/dump/mywebsites-dotnetmvc/bordro/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/mewasme/perfect/bordro/Views/Shared/_ValidationScriptsPartial.cshtml]
+[/home/esat/dump/mywebsites-dotnetmvc/bordro/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/mewasme/perfect/bordro/Views/_ViewImports.cshtml]
+[/home/esat/dump/mywebsites-dotnetmvc/bordro/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/mewasme/perfect/bordro/Views/_ViewStart.cshtml]
+[/home/esat/dump/mywebsites-dotnetmvc/bordro/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/mewasme/perfect/bordro/Views/Shared/_Layout.cshtml]
+[/home/esat/dump/mywebsites-dotnetmvc/bordro/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-ixvktk5ymg
