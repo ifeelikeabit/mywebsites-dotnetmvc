@@ -46,6 +46,8 @@ builder.Services.Configure<IdentityOptions>(options =>
 
 });
 
+
+
 builder.Services.ConfigureApplicationCookie(options =>
 {
     //Çerez özelliklerinin ayarlanması
