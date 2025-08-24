@@ -17,25 +17,26 @@ Tanım: Hal takip sistemi
 - Hale ürün ekleme (CRUD)
 - Ürün bilgileri (konum, satıcı numarası, fiyat, kilo)
 
-**Ekran Görüntüleri:**
-<p float="left">
-  <a href="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/mygarden/mygarden-login.png">
-    <img src="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/mygarden/mygarden-login.png" width="200" />
+<figure style="display:inline-block; margin:10px;">
+  <a href="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/mygarden-login.png">
+    <img src="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/mygarden-login.png" width="200"/>
   </a>
-  <a href="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/mygarden/mygarden-admin-user-manage.png">
-    <img src="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/mygarden/mygarden-admin-user-manage.png" width="200" />
-  </a>
-  <a href="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/mygarden/mygarden-new-product.png">
-    <img src="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/mygarden/mygarden-new-product.png" width="200" />
-  </a>
-  <a href="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/mygarden/mygarden-update-product.png">
-    <img src="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/mygarden/mygarden-update-product.png" width="200" />
-  </a>
-  <a href="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/mygarden/mygarden-list-product.png">
-    <img src="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/mygarden/mygarden-list-product.png" width="200" />
-  </a>
-</p>
+  <figcaption style="text-align:center;">Login Screen</figcaption>
+</figure>
 
+<figure style="display:inline-block; margin:10px;">
+  <a href="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/mygarden-admin-user-manage.png">
+    <img src="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/mygarden-admin-user-manage.png" width="200"/>
+  </a>
+  <figcaption style="text-align:center;">User Management</figcaption>
+</figure>
+
+<figure style="display:inline-block; margin:10px;">
+  <a href="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/mygarden-new-product.png">
+    <img src="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/mygarden-new-product.png" width="200"/>
+  </a>
+  <figcaption style="text-align:center;">New Product</figcaption>
+</figure>
 ---
 
 ## Bordro 💼
@@ -47,25 +48,33 @@ Tanım: Şirket içi çalışanların maaşları ve bordrolarını takip ve hesa
 - Maaş bilgisi
 - Bordro hesabı
 
-<p float="left">
-  <h>Welcome</h>
+<figure style="display:inline-block; margin:10px;">
   <a href="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/bordro/welcome.png">
-    <img src="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/bordro/welcome.png" width="200" />
+    <img src="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/bordro/welcome.png" width="200"/>
   </a>
-  <h>Calculated Payroll</h>
-  <a href="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/bordro/calculated.png">
-    <img src="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/bordro/calculated.png" width="200" />
-  </a>
-  <h>Worker List</h>
-  <a href="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/bordro/workerlist.png">
-    <img src="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/bordro/worketlist.png" width="200" />
-  </a>
-  <h>Worker Detail</h>
-  <a href="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/bordro/workerdetail.png">
-    <img src="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/bordro/workerdetail.png" width="200" />
-  </a>
-</p>
+  <figcaption style="text-align:center;">Welcome</figcaption>
+</figure>
 
+<figure style="display:inline-block; margin:10px;">
+  <a href="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/bordro/calculated.png">
+    <img src="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/bordro/calculated.png" width="200"/>
+  </a>
+  <figcaption style="text-align:center;">Calculated Payroll</figcaption>
+</figure>
+
+<figure style="display:inline-block; margin:10px;">
+  <a href="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/bordro/workerlist.png">
+    <img src="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/bordro/workerlist.png" width="200"/>
+  </a>
+  <figcaption style="text-align:center;">Worker List</figcaption>
+</figure>
+
+<figure style="display:inline-block; margin:10px;">
+  <a href="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/bordro/workerdetail.png">
+    <img src="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/bordro/workerdetail.png" width="200"/>
+  </a>
+  <figcaption style="text-align:center;">Worker Detail</figcaption>
+</figure>
 ---
 
 ## KursSitesi 📚
