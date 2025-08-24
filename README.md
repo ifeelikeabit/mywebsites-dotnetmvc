@@ -1,27 +1,58 @@
+
 # ASP .NET MVC İle Kodlanmıştır
 
+## İçindekiler
+- [MyGardenShip 🌱](#mygardenship-)
+- [Bordro 💼](#bordro-)
+- [KursSitesi 📚](#kurssitesi-)
+- [MowBank 🏦](#mowbank-)
 
-# MyGardenShip 🌱
+---
+
+## MyGardenShip 🌱
 Tanım: Hal takip sistemi
 
-Özellikler:
+**Özellikler:**
 - Hal oluşturma (CRUD)
 - Hale ürün ekleme (CRUD)
 - Ürün bilgileri (konum, satıcı numarası, fiyat, kilo)
 
-# Bordro 💼
+**Ekran Görüntüleri:**
+<p float="left">
+  <a href="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/mygarden-login.png">
+    <img src="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/mygarden-login.png" width="200" />
+  </a>
+  <a href="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/mygarden-admin-user-manage.png">
+    <img src="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/mygarden-admin-user-manage.png" width="200" />
+  </a>
+  <a href="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/mygarden-new-product.png">
+    <img src="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/mygarden-new-product.png" width="200" />
+  </a>
+  <a href="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/mygarden-update-product.png">
+    <img src="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/mygarden-update-product.png" width="200" />
+  </a>
+  <a href="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/mygarden-list-product.png">
+    <img src="https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/mygarden-list-product.png" width="200" />
+  </a>
+</p>
+
+---
+
+## Bordro 💼
 Tanım: Şirket içi çalışanların maaşları ve bordrolarını takip ve hesaplama sistemi
 
-Özellikler:
+**Özellikler:**
 - Şirket oluşturma (CRUD)
 - Personel ekleme (CRUD)
 - Maaş bilgisi
 - Bordro hesabı
 
-# KursSitesi 📚
+---
+
+## KursSitesi 📚
 Tanım: Ders-öğretmen-öğrenci kayıt ve ilişki takibi
 
-Özellikler:
+**Özellikler:**
 - Ders ekleme (CRUD)
 - Öğretmen ekleme (CRUD)
 - Öğrenci ekleme (CRUD)
@@ -29,26 +60,14 @@ Tanım: Ders-öğretmen-öğrenci kayıt ve ilişki takibi
 - Derse öğrenci ekleme
 - Ders saati belirleme
 
-# MowBank 🏦
+---
+
+## MowBank 🏦
 Tanım: Kullanıcı bilgi sistemi, veri takibi
 
-Özellikler:
+**Özellikler:**
 - Kullanıcı ekleme
 - Kullanıcı bilgileri ekleme ve takibi
-
-
-![Desktop](https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/mygarden-login.png)
-![Desktop](https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/mygarden-admin-user-manage.png)
-![Desktop](https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/mygarden-new-product.png)
-![Desktop](https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/mygarden-update-product.png)
-![Desktop](https://github.com/ifeelikeabit/mywebsites-dotnetmvc/raw/main/images/mygarden-list-product.png)
-
-
-
-
-
-
-
 
 
 
